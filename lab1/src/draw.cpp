@@ -50,21 +50,21 @@ void draw(SDL_Surface *s, int a)
     put_pixel32(s, x + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y, RGB32(0, 0, 0));
   }
 
-  for (double t1 = -2; t1 <= 3; t1 += 0.07)
+  for (double t = -2; t <= 3; t += 0.07)
   {
     // Координаты прямой
-    int x1 = (int)(a * t1 - a);
-    int y1 = (int)(-a * t1);
+    int x = (int)(a * t - a);
+    int y = (int)(-a * t);
 
-    put_pixel32(s, x1 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y1, RGB32(0, 0, 255));
+    put_pixel32(s, x + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y, RGB32(0, 0, 255));
   }
 
-  for (double t2 = 0; t2 <= 10; t2 += 0.01)
+  for (double t = 0; t <= 10; t += 0.01)
   {
     //Вершина
-    int x2 = (int)(a/30 * cos(t2) + 3*a/2);
-    int y2 = (int)(a/30 * sin(t2) + 3*a/2);
+    int x = (int)(a/30 * cos(t) + 3*a/2);
+    int y = (int)(a/30 * sin(t) + 3*a/2);
 
-    put_pixel32(s, x2 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y2, RGB32(0, 128, 0));
+    put_pixel32(s, x + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y, RGB32(0, 128, 0));
   }
 }
