@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\4664ae86c2a83d220f678097b75aae3d\glm-external-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\4664ae86c2a83d220f678097b75aae3d\glm-external-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\4664ae86c2a83d220f678097b75aae3d\glm-external-update_disconnected.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\4664ae86c2a83d220f678097b75aae3d\glm-external-patch_disconnected.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\4664ae86c2a83d220f678097b75aae3d\glm-external-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\4664ae86c2a83d220f678097b75aae3d\glm-external-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\4664ae86c2a83d220f678097b75aae3d\glm-external-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\da5d0b0b39d137c6295a8851d0833cf1\glm-external-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\6cfb1c26a1f5604e33c6628911d64ec4\glm-external.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\bukat\Projects\lab1\CMakeFiles\glm-external" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{6A25E73E-1612-39E8-A109-8278E08E4CDD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
