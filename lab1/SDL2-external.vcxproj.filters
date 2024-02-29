@@ -1,41 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\d7e54875497e1916dfb896b540f067eb\SDL2-external-mkdir.rule">
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab1\CMakeFiles\44264b93af25bd7e548ec99c2c944405\SDL2-external-mkdir.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\d7e54875497e1916dfb896b540f067eb\SDL2-external-download.rule">
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab1\CMakeFiles\44264b93af25bd7e548ec99c2c944405\SDL2-external-download.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\d7e54875497e1916dfb896b540f067eb\SDL2-external-update_disconnected.rule">
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab1\CMakeFiles\44264b93af25bd7e548ec99c2c944405\SDL2-external-update_disconnected.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\d7e54875497e1916dfb896b540f067eb\SDL2-external-patch_disconnected.rule">
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab1\CMakeFiles\44264b93af25bd7e548ec99c2c944405\SDL2-external-patch_disconnected.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\d7e54875497e1916dfb896b540f067eb\SDL2-external-configure.rule">
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab1\CMakeFiles\44264b93af25bd7e548ec99c2c944405\SDL2-external-configure.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\d7e54875497e1916dfb896b540f067eb\SDL2-external-build.rule">
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab1\CMakeFiles\44264b93af25bd7e548ec99c2c944405\SDL2-external-build.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\d7e54875497e1916dfb896b540f067eb\SDL2-external-install.rule">
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab1\CMakeFiles\44264b93af25bd7e548ec99c2c944405\SDL2-external-install.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\da5d0b0b39d137c6295a8851d0833cf1\SDL2-external-complete.rule">
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab1\CMakeFiles\533f2bde3388c38eba72e8be466cb1cc\SDL2-external-complete.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeFiles\6cfb1c26a1f5604e33c6628911d64ec4\SDL2-external.rule">
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab1\CMakeFiles\62606d789485ae58046af634d96220f1\SDL2-external.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\bukat\Projects\lab1\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab1\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\bukat\Projects\lab1\CMakeFiles\SDL2-external" />
+    <None Include="C:\Users\bukat\Projects\MiAKG\lab1\CMakeFiles\SDL2-external" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{6A25E73E-1612-39E8-A109-8278E08E4CDD}</UniqueIdentifier>
+      <UniqueIdentifier>{A0EB7DDC-230D-34D1-9ED8-49C929B1DD91}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
