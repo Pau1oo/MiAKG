@@ -65,6 +65,6 @@ void draw(SDL_Surface *s, int a)
     int x2 = (int)(a/30 * cos(t2) + 3*a/2);
     int y2 = (int)(a/30 * sin(t2) + 3*a/2);
 
-    put_pixel32(s, x2 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y2, RGB32(0, 255, 0));
+    put_pixel32(s, x2 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y2, RGB32(0, 128, 0));
   }
 }
