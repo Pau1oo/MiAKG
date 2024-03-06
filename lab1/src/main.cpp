@@ -69,6 +69,9 @@ int main(int argc, char *argv[])
       SDL_Event e;
 
       int a = 50;
+      int u = 0;
+      int d = 0;
+      double alpha = 0;
       while (!quit) {
         while (SDL_PollEvent(&e) != 0) {
           if (SDL_QUIT == e.type) {
@@ -76,6 +79,30 @@ int main(int argc, char *argv[])
           }
           if (SDL_KEYDOWN == e.type) {
             switch (e.key.keysym.scancode) {
+            case SDL_SCANCODE_Q:
+              alpha -= 5;
+              SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
+              break;
+            case SDL_SCANCODE_E:
+              alpha += 5;
+              SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
+              break;
+            case SDL_SCANCODE_UP:
+              d += 3;
+              SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
+              break;
+            case SDL_SCANCODE_DOWN:
+              d -= 3;
+              SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
+              break;
+            case SDL_SCANCODE_LEFT:
+              u -= 3;
+              SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
+              break;
+            case SDL_SCANCODE_RIGHT:
+              u += 3;
+              SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
+              break;
             case SDL_SCANCODE_KP_PLUS:
               //printf("SDL_SCANCODE_KP_PLUS have been presssed\n");
               a += 1;
@@ -98,7 +125,7 @@ int main(int argc, char *argv[])
         }
         SDL_RenderClear(gRenderer);
 
-        draw(loadedSurface, a);
+        draw(loadedSurface, a, u, d, alpha * 3.14 / 180);
 
         SDL_UpdateTexture(gTexture, NULL, loadedSurface->pixels, loadedSurface->pitch);
         SDL_RenderCopy(gRenderer, gTexture, NULL, NULL);
