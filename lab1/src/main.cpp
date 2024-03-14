@@ -68,10 +68,10 @@ int main(int argc, char *argv[])
       bool quit = false;
       SDL_Event e;
 
-      int a = 50;
-      int u = 0;
-      int d = 0;
-      double alpha = 0;
+      float a = 50;
+      float u = 0;
+      float d = 0;
+      float alpha = 0;
       while (!quit) {
         while (SDL_PollEvent(&e) != 0) {
           if (SDL_QUIT == e.type) {
@@ -80,11 +80,11 @@ int main(int argc, char *argv[])
           if (SDL_KEYDOWN == e.type) {
             switch (e.key.keysym.scancode) {
             case SDL_SCANCODE_Q:
-              alpha -= 5;
+              alpha -= 3;
               SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
               break;
             case SDL_SCANCODE_E:
-              alpha += 5;
+              alpha += 3;
               SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
               break;
             case SDL_SCANCODE_UP:

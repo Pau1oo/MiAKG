@@ -24,14 +24,8 @@ Uint32 get_pixel32(SDL_Surface *surface, int x, int y)
   Uint32 *pixels = (Uint32 *)surface->pixels;
   return pixels[(y * surface->w) + x];
 }
-int my_put_pixel(int x, int y, double alpha)
-{
-  x = (int)(x * cos(alpha) - y * sin(alpha));
-  y = (int)(x * sin(alpha) + y * cos(alpha));
-  return x, y;
-}
 
-void draw(SDL_Surface *s, int a, int u, int d, double alpha)
+void draw(SDL_Surface *s, float a, float u, float d, float alpha)
 {
   glm::vec4 Position = glm::vec4(glm::vec3(0.0f), 1.0f);
   glm::mat4 Model = glm::translate(    glm::mat4(1.0f), glm::vec3(1.0f));
@@ -44,38 +38,53 @@ void draw(SDL_Surface *s, int a, int u, int d, double alpha)
   for (int j = 0; j < SCREEN_HEIGHT; j++)
     put_pixel32(s, SCREEN_WIDTH / 2, j, RGB32(105, 105, 105));
 
-  for (double t = -100; t <= 100; t+=0.0001) 
+  for (float t = -100; t <= 100; t+=0.001) 
   {
     if (t >= -1.43 && t <= -0.7)
       continue;
 
     //Координаты кривой
-    int x = (int)((3 * a * t) / (1 + t * t * t)) + u;
-    int y = (int)((3 * a * t * t) / (1 + t * t * t)) + d;
+    float x = ((3 * a * t) / (1 + t * t * t));
+    float y = ((3 * a * t * t) / (1 + t * t * t));
 
-    x, y = my_put_pixel(x, y, alpha);
+    float rotate_x = x * cos(alpha) + y * sin(alpha);
+    float rotate_y = -x * sin(alpha) + y * cos(alpha);
+    x = rotate_x;
+    y = rotate_y;
+    x += u;
+    y += d;
 
     put_pixel32(s, x + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y, RGB32(0, 0, 0));
   }
 
-  for (double t = -2; t <= 3; t += 0.07)
+  for (float t = -2; t <= 3; t += 0.07)
   {
     // Координаты прямой
-    int x = (int)(a * t - a) + u;
-    int y = (int)(-a * t) + d;
+    float x = a * t - a;
+    float y = -a * t;
 
-    my_put_pixel(x, y, alpha);
+    float rotate_x = x * cos(alpha) + y * sin(alpha);
+    float rotate_y = -x * sin(alpha) + y * cos(alpha);
+    x = rotate_x;
+    y = rotate_y;
+    x += u;
+    y += d;
 
     put_pixel32(s, x + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y, RGB32(0, 0, 255));
   }
 
-  for (double t = 0; t <= 10; t += 0.01)
+  for (float t = 0; t <= 10; t += 0.01)
   {
     //Вершина
-    int x = (int)(a/30 * cos(t) + 3*a/2) + u;
-    int y = (int)(a/30 * sin(t) + 3*a/2) + d;
+    float x = a/30 * cos(t) + 3*a/2;
+    float y = a/30 * sin(t) + 3*a/2;
 
-    my_put_pixel(x, y, alpha);
+    float rotate_x = x * cos(alpha) + y * sin(alpha);
+    float rotate_y = -x * sin(alpha) + y * cos(alpha);
+    x = rotate_x;
+    y = rotate_y;
+    x += u;
+    y += d;
 
     put_pixel32(s, x + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y, RGB32(0, 128, 0));
   }
