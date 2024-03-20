@@ -1,4 +1,5 @@
-﻿#include "draw.h"
+﻿
+#include "draw.h"
 
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
@@ -7,12 +8,10 @@
 
 void put_pixel32(SDL_Surface *surface, int x, int y, Uint32 pixel)
 {
-  assert(NULL != surface);
-  assert(x < SCREEN_WIDTH);
-  assert(y < SCREEN_HEIGHT);
-
+  if((x > 0 && x < SCREEN_WIDTH) && (y > 0 && y < SCREEN_HEIGHT)){
   Uint32 *pixels = (Uint32 *)surface->pixels;
   pixels[(y * surface->w) + x] = pixel;
+}
 }
 
 Uint32 get_pixel32(SDL_Surface *surface, int x, int y)
