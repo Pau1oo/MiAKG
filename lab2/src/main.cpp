@@ -68,6 +68,7 @@ int main(int argc, char *argv[])
       bool quit = false;
       SDL_Event e;
 
+      int choose = 1;
       float r = 100;
       int n = 10;
       float u = 0;
@@ -80,6 +81,12 @@ int main(int argc, char *argv[])
           }
           if (SDL_KEYDOWN == e.type) {
             switch (e.key.keysym.scancode) {
+            case SDL_SCANCODE_1:
+              choose = 1;
+              break;
+            case SDL_SCANCODE_2:
+              choose = 2;
+              break;
             case SDL_SCANCODE_Q:
               alpha -= 3;
               SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
@@ -105,15 +112,15 @@ int main(int argc, char *argv[])
               SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
               break;
             case SDL_SCANCODE_KP_PLUS:
-              r += 1;
+              r += 2;
               SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
               break;
             case SDL_SCANCODE_KP_MINUS:
-              if (r == 0)
+              if (r <= 0)
                 continue;
               else
               {
-                r -= 1;
+                r -= 2;
                 SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
               }
               break;
@@ -137,7 +144,17 @@ int main(int argc, char *argv[])
         }
         SDL_RenderClear(gRenderer);
 
-        draw(loadedSurface, r, u, d, n, alpha * 3.14 / 180);
+        switch (choose)
+        {
+          case 1:
+            SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
+            draw_nested_squares(loadedSurface, r, u, d, n, alpha * 3.14 / 180);
+            break;
+          case 2:
+            SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
+            draw_nested_triangles(loadedSurface, r, u, d, n, alpha * 3.14 / 180);
+            break;
+        }   
 
         SDL_UpdateTexture(gTexture, NULL, loadedSurface->pixels, loadedSurface->pitch);
         SDL_RenderCopy(gRenderer, gTexture, NULL, NULL);

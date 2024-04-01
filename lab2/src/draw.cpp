@@ -64,6 +64,30 @@ void draw_square(SDL_Surface *s, float x1, float y1, float x2, float y2, float x
   }
 }
 
+void draw_triangle(SDL_Surface *s, float x1, float y1, float x2, float y2, float x3, float y3)
+{
+  for (float t = 0; t <= 1; t += 0.001)
+  {
+    float x = (x2 - x1) * t + x1;
+    float y = (y2 - y1) * t + y1;
+    put_pixel32(s, x, y, RGB32(0, 0, 0));
+  }
+
+  for (float t = 0; t <= 1; t += 0.001)
+  {
+    float x = (x3 - x2) * t + x2;
+    float y = (y3 - y2) * t + y2;
+    put_pixel32(s, x, y, RGB32(0, 0, 0));
+  }
+
+  for (float t = 0; t <= 1; t += 0.001)
+  {
+    float x = (x1 - x3) * t + x3;
+    float y = (y1 - y3) * t + y3;
+    put_pixel32(s, x, y, RGB32(0, 0, 0));
+  }
+}
+
 void affine_transform(float *x, float *y, float u, float d, float alpha)
 {
   float rotate_x = (*x) * cos(alpha) + (*y) * sin(alpha);
@@ -74,7 +98,7 @@ void affine_transform(float *x, float *y, float u, float d, float alpha)
   *y += d;
 }
 
-void convert_coordinates(float q, float *x1, float *y1, float *x2, float *y2, float *x3, float *y3, float *x4, float *y4)
+void convert_coordinates4(float q, float *x1, float *y1, float *x2, float *y2, float *x3, float *y3, float *x4, float *y4)
 {
   float new_x1 = (1 - q) * (*x1) + q * (*x2);
   float new_y1 = (1 - q) * (*y1) + q * (*y2);
@@ -95,7 +119,24 @@ void convert_coordinates(float q, float *x1, float *y1, float *x2, float *y2, fl
   *y4 = new_y4;
 }
 
-void draw(SDL_Surface *s, float r, float u, float d, int n, float alpha)
+void convert_coordinates3(float q, float *x1, float *y1, float *x2, float *y2, float *x3, float *y3)
+{
+  float new_x1 = (1 - q) * (*x1) + q * (*x2);
+  float new_y1 = (1 - q) * (*y1) + q * (*y2);
+  float new_x2 = (1 - q) * (*x2) + q * (*x3);
+  float new_y2 = (1 - q) * (*y2) + q * (*y3);
+  float new_x3 = (1 - q) * (*x3) + q * (*x1);
+  float new_y3 = (1 - q) * (*y3) + q * (*y1);
+
+  *x1 = new_x1;
+  *y1 = new_y1;
+  *x2 = new_x2;
+  *y2 = new_y2;
+  *x3 = new_x3;
+  *y3 = new_y3;
+}
+
+void draw_nested_squares(SDL_Surface *s, float r, float u, float d, int n, float alpha)
 {
   draw_axis(s);
 
@@ -122,11 +163,42 @@ void draw(SDL_Surface *s, float r, float u, float d, int n, float alpha)
 
   for (int i = 1; i <= n; i++)
   {
-    convert_coordinates(q, &x1, &y1, &x2, &y2, &x3, &y3, &x4, &y4);
+    convert_coordinates4(q, &x1, &y1, &x2, &y2, &x3, &y3, &x4, &y4);
 
     draw_square(s, x1 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y1,
                    x2 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y2, 
                    x3 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y3,
                    x4 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y4);
+  }
+}
+
+void draw_nested_triangles(SDL_Surface *s, float r, float u, float d, int n, float alpha)
+{
+  draw_axis(s);
+
+  float x1 = -r;
+  float y1 = 2 * r * sqrt(3) / 6;
+  float x2 = 0;
+  float y2 = -2 * r * sqrt(3) / 3;
+  float x3 = r;
+  float y3 = 2 * r * sqrt(3) / 6;
+
+  affine_transform(&x1, &y1, u, d, alpha);
+  affine_transform(&x2, &y2, u, d, alpha);
+  affine_transform(&x3, &y3, u, d, alpha);
+
+  draw_triangle(s, x1 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y1,
+                   x2 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y2, 
+                   x3 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y3);
+
+  float q = 0.1;
+
+  for (int i = 1; i <= n; i++)
+  {
+    convert_coordinates3(q, &x1, &y1, &x2, &y2, &x3, &y3);
+
+    draw_triangle(s, x1 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y1,
+                     x2 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y2, 
+                     x3 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y3);
   }
 }
