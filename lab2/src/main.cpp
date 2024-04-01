@@ -87,6 +87,9 @@ int main(int argc, char *argv[])
             case SDL_SCANCODE_2:
               choose = 2;
               break;
+            case SDL_SCANCODE_3:
+              choose = 3;
+              break;
             case SDL_SCANCODE_Q:
               alpha -= 3;
               SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
@@ -153,6 +156,10 @@ int main(int argc, char *argv[])
           case 2:
             SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
             draw_nested_triangles(loadedSurface, r, u, d, n, alpha * 3.14 / 180);
+            break;
+          case 3:
+            SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
+            draw_nested_pentagons(loadedSurface, r, u, d, n, alpha * 3.14 / 180);
             break;
         }   
 
