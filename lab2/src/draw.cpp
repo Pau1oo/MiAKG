@@ -203,6 +203,7 @@ void draw_nested_squares(SDL_Surface *s, float r, float u, float d, int n, float
 {
   draw_axis(s);
 
+  float q = 0.1;
   float x1 = - r;
   float y1 = - r;
   float x2 = - r;
@@ -222,8 +223,6 @@ void draw_nested_squares(SDL_Surface *s, float r, float u, float d, int n, float
                  x3 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y3,
                  x4 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y4);
 
-  float q = 0.1;
-
   for (int i = 1; i <= n; i++)
   {
     convert_coordinates4(q, &x1, &y1, &x2, &y2, &x3, &y3, &x4, &y4);
@@ -239,6 +238,7 @@ void draw_nested_triangles(SDL_Surface *s, float r, float u, float d, int n, flo
 {
   draw_axis(s);
 
+  float q = 0.1;
   float x1 = -r;
   float y1 = 2 * r * sqrt(3) / 6;
   float x2 = 0;
@@ -254,8 +254,6 @@ void draw_nested_triangles(SDL_Surface *s, float r, float u, float d, int n, flo
                    x2 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y2, 
                    x3 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y3);
 
-  float q = 0.1;
-
   for (int i = 1; i <= n; i++)
   {
     convert_coordinates3(q, &x1, &y1, &x2, &y2, &x3, &y3);
@@ -270,17 +268,18 @@ void draw_nested_pentagons(SDL_Surface *s, float r, float u, float d, int n, flo
 {
   draw_axis(s);
 
-  float x1 = r * cos(0);
-  float y1 = r * sin(0);
-  float x2 = r * cos(2 * 3.14 / 5);
-  float y2 = r * sin(2 * 3.14 / 5);
-  float x3 = r * cos(4 * 3.14 / 5);
-  float y3 = r * sin(4 * 3.14 / 5);
-  float x4 = r * cos(6 * 3.14 / 5);
-  float y4 = r * sin(6 * 3.14 / 5);
-  float x5 = r * cos(8 * 3.14 / 5);
-  float y5 = r * sin(8 * 3.14 / 5);
-
+  float q = 0.1;
+  float x1 = r * sin(0);
+  float y1 = r * cos(0);
+  float x2 = r * sin(2 * 3.14 / 5);
+  float y2 = r * cos(2 * 3.14 / 5);
+  float x3 = r * sin(4 * 3.14 / 5);
+  float y3 = r * cos(4 * 3.14 / 5);
+  float x4 = r * sin(6 * 3.14 / 5);
+  float y4 = r * cos(6 * 3.14 / 5);
+  float x5 = r * sin(8 * 3.14 / 5);
+  float y5 = r * cos(8 * 3.14 / 5);
+  
   affine_transform(&x1, &y1, u, d, alpha);
   affine_transform(&x2, &y2, u, d, alpha);
   affine_transform(&x3, &y3, u, d, alpha);
@@ -288,21 +287,19 @@ void draw_nested_pentagons(SDL_Surface *s, float r, float u, float d, int n, flo
   affine_transform(&x5, &y5, u, d, alpha);
 
   draw_pentagon(s, x1 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y1,
-                 x2 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y2, 
-                 x3 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y3,
-                 x4 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y4,
-                 x5 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y5);
-
-  float q = 0.1;
+                   x2 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y2, 
+                   x3 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y3,
+                   x4 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y4,
+                   x5 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y5);
 
   for (int i = 1; i <= n; i++)
   {
     convert_coordinates5(q, &x1, &y1, &x2, &y2, &x3, &y3, &x4, &y4, &x5, &y5);
 
     draw_pentagon(s, x1 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y1,
-                   x2 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y2, 
-                   x3 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y3,
-                   x4 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y4,
-                   x5 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y5);
+                     x2 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y2, 
+                     x3 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y3,
+                     x4 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y4,
+                     x5 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y5);
   }
 }
