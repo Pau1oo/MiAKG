@@ -74,7 +74,28 @@ void affine_transform(float *x, float *y, float u, float d, float alpha)
   *y += d;
 }
 
-void draw(SDL_Surface *s, float r, float u, float d, float alpha)
+void convert_coordinates(float q, float *x1, float *y1, float *x2, float *y2, float *x3, float *y3, float *x4, float *y4)
+{
+  float new_x1 = (1 - q) * (*x1) + q * (*x2);
+  float new_y1 = (1 - q) * (*y1) + q * (*y2);
+  float new_x2 = (1 - q) * (*x2) + q * (*x3);
+  float new_y2 = (1 - q) * (*y2) + q * (*y3);
+  float new_x3 = (1 - q) * (*x3) + q * (*x4);
+  float new_y3 = (1 - q) * (*y3) + q * (*y4);
+  float new_x4 = (1 - q) * (*x4) + q * (*x1);
+  float new_y4 = (1 - q) * (*y4) + q * (*y1);
+
+  *x1 = new_x1;
+  *y1 = new_y1;
+  *x2 = new_x2;
+  *y2 = new_y2;
+  *x3 = new_x3;
+  *y3 = new_y3;
+  *x4 = new_x4;
+  *y4 = new_y4;
+}
+
+void draw(SDL_Surface *s, float r, float u, float d, int n, float alpha)
 {
   draw_axis(s);
 
@@ -96,4 +117,16 @@ void draw(SDL_Surface *s, float r, float u, float d, float alpha)
                  x2 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y2, 
                  x3 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y3,
                  x4 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y4);
+
+  float q = 0.1;
+
+  for (int i = 1; i <= n; i++)
+  {
+    convert_coordinates(q, &x1, &y1, &x2, &y2, &x3, &y3, &x4, &y4);
+
+    draw_square(s, x1 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y1,
+                   x2 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y2, 
+                   x3 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y3,
+                   x4 + SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - y4);
+  }
 }
