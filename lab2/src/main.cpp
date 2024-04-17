@@ -68,12 +68,14 @@ int main(int argc, char *argv[])
       bool quit = false;
       SDL_Event e;
 
-      int choose = 1;
       float r = 100;
       int n = 10;
       float u = 0;
       float d = 0;
       float alpha = 0;
+      int mouse_x = NULL;
+      int mouse_y = NULL;
+      int num_vertex = 3;
       while (!quit) {
         while (SDL_PollEvent(&e) != 0) {
           if (SDL_QUIT == e.type) {
@@ -81,29 +83,20 @@ int main(int argc, char *argv[])
           }
           if (SDL_KEYDOWN == e.type) {
             switch (e.key.keysym.scancode) {
-            case SDL_SCANCODE_1:
-              choose = 1;
-              break;
-            case SDL_SCANCODE_2:
-              choose = 2;
-              break;
-            case SDL_SCANCODE_3:
-              choose = 3;
-              break;
             case SDL_SCANCODE_Q:
-              alpha -= 3;
-              SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
-              break;
-            case SDL_SCANCODE_E:
               alpha += 3;
               SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
               break;
+            case SDL_SCANCODE_E:
+              alpha -= 3;
+              SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
+              break;
             case SDL_SCANCODE_UP:
-              d += 3;
+              d -= 3;
               SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
               break;
             case SDL_SCANCODE_DOWN:
-              d -= 3;
+              d += 3;
               SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
               break;
             case SDL_SCANCODE_LEFT:
@@ -130,6 +123,7 @@ int main(int argc, char *argv[])
               case SDL_SCANCODE_W:
               n += 1;
               SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
+              printf("%d\n", n);
               break;
             case SDL_SCANCODE_S:
               if (n == 0)
@@ -138,7 +132,21 @@ int main(int argc, char *argv[])
               {
                 n -= 1;
                 SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
+                printf("%d\n", n);
               }
+              break;
+              case SDL_SCANCODE_1:
+              if (num_vertex <= 3)
+                continue;
+              else
+              {
+                num_vertex -= 1;
+                SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
+              }
+              break;
+              case SDL_SCANCODE_2:
+              num_vertex += 1;
+              SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
               break;
             default:
               break;
@@ -147,21 +155,13 @@ int main(int argc, char *argv[])
         }
         SDL_RenderClear(gRenderer);
 
-        switch (choose)
+        if(SDL_MOUSEBUTTONDOWN == e.type)
         {
-          case 1:
-            SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
-            draw_nested_squares(loadedSurface, r, u, d, n, alpha * 3.14 / 180);
-            break;
-          case 2:
-            SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
-            draw_nested_triangles(loadedSurface, r, u, d, n, alpha * 3.14 / 180);
-            break;
-          case 3:
-            SDL_FillRect(loadedSurface, NULL, 0x00FFFFFF);
-            draw_nested_pentagons(loadedSurface, r, u, d, n, alpha * 3.14 / 180);
-            break;
-        }   
+          SDL_GetMouseState(&mouse_x, &mouse_y);
+        }
+        (float)mouse_x; (float)mouse_y;
+
+        draw_nested_figures(loadedSurface, mouse_x, mouse_y, num_vertex, r, u, d, n, alpha * M_PI / 180);
 
         SDL_UpdateTexture(gTexture, NULL, loadedSurface->pixels, loadedSurface->pitch);
         SDL_RenderCopy(gRenderer, gTexture, NULL, NULL);
