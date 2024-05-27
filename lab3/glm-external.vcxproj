@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5FB887B4-929D-30A8-826E-9ED4EC4D27C5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>glm-external</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\include\SDL2;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\include\SDL2;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-mkdir.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/tmp/glm-external-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Debug/glm-external-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Creating directories for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Release -P C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/tmp/glm-external-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Release/glm-external-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-download.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (verify and extract) for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/verify-glm-external.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/extract-glm-external.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Debug/glm-external-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\glm-external-urlinfo.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing download step (verify and extract) for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/verify-glm-external.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/extract-glm-external.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Release/glm-external-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\glm-external-urlinfo.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-update_disconnected.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No update_disconnected step for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Debug/glm-external-update_disconnected
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\glm-external-update-info.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-update_disconnected</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No update_disconnected step for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Release/glm-external-update_disconnected
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\glm-external-update-info.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-update_disconnected</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-patch_disconnected.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch_disconnected step for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Debug/glm-external-patch_disconnected
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\glm-external-patch-info.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-update_disconnected;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-patch_disconnected</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No patch_disconnected step for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Release/glm-external-patch_disconnected
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\glm-external-patch-info.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-update_disconnected;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-patch_disconnected</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-configure.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No configure step for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Debug/glm-external-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\tmp\glm-external-cfgcmd.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-patch_disconnected;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No configure step for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Release/glm-external-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\tmp\glm-external-cfgcmd.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-patch_disconnected;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-build.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No build step for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Debug/glm-external-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No build step for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Release/glm-external-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-install.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing install step for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external/glm C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/glm
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Debug/glm-external-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing install step for 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external/glm C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/glm
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Release/glm-external-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f3a0be17337078c02916f0c73959369e\glm-external-complete.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/bukat/Projects/MiAKG/lab3/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/CMakeFiles/Debug/glm-external-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Debug/glm-external-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-install;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-mkdir;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-download;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-update_disconnected;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-patch_disconnected;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-configure;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Debug\glm-external-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\Debug\glm-external-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Completed 'glm-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/bukat/Projects/MiAKG/lab3/CMakeFiles/Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/CMakeFiles/Release/glm-external-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/glm-external-stamp/Release/glm-external-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-install;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-mkdir;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-download;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-update_disconnected;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-patch_disconnected;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-configure;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\glm-external-stamp\Release\glm-external-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\Release\glm-external-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\6541dfa1ea2677739c66e2584d8836e1\glm-external.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\Debug\glm-external-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\glm-external</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\Release\glm-external-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\glm-external</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/bukat/Projects/MiAKG/lab3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/bukat/Projects/MiAKG/lab3 -BC:/Users/bukat/Projects/MiAKG/lab3 --check-stamp-file C:/Users/bukat/Projects/MiAKG/lab3/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\verify.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeCCompiler.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeCXXCompiler.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeRCCompiler.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeSystem.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\CompilerWarnings.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\FileOrUrl.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\SDL2-external.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\Sanitizers.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\StandardProjectSettings.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\StaticAnalyzers.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\glm-external.cmake;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\tmp\SDL2-external-mkdirs.cmake;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\tmp\glm-external-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/bukat/Projects/MiAKG/lab3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/bukat/Projects/MiAKG/lab3 -BC:/Users/bukat/Projects/MiAKG/lab3 --check-stamp-file C:/Users/bukat/Projects/MiAKG/lab3/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\verify.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeCCompiler.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeCXXCompiler.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeRCCompiler.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeSystem.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\CompilerWarnings.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\FileOrUrl.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\SDL2-external.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\Sanitizers.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\StandardProjectSettings.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\StaticAnalyzers.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\glm-external.cmake;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\tmp\SDL2-external-mkdirs.cmake;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\tmp\glm-external-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\glm-external">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\bukat\Projects\MiAKG\lab3\ZERO_CHECK.vcxproj">
+      <Project>{9DBDD571-8B74-3E00-80B3-802B4A26AA17}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

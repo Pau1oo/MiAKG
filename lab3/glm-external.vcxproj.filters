@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-update_disconnected.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-patch_disconnected.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\b9750a0e63f426f11d23fe4238e207ed\glm-external-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f3a0be17337078c02916f0c73959369e\glm-external-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\6541dfa1ea2677739c66e2584d8836e1\glm-external.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\glm-external" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BC76AA15-EB78-3914-BFCB-FD98DC4609BD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

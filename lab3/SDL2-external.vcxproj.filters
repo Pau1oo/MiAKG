@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-update_disconnected.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-patch_disconnected.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f3a0be17337078c02916f0c73959369e\SDL2-external-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\6541dfa1ea2677739c66e2584d8836e1\SDL2-external.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\SDL2-external" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BC76AA15-EB78-3914-BFCB-FD98DC4609BD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

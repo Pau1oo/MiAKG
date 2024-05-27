@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1F752E71-874B-3915-8FBC-EC4088E5150C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>SDL2-external</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\include\SDL2;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\include\SDL2;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-mkdir.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/tmp/SDL2-external-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Debug/SDL2-external-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Creating directories for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Release -P C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/tmp/SDL2-external-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Release/SDL2-external-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-download.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (verify and extract) for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/verify-SDL2-external.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/extract-SDL2-external.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Debug/SDL2-external-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\SDL2-external-urlinfo.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing download step (verify and extract) for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/verify-SDL2-external.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/extract-SDL2-external.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Release/SDL2-external-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\SDL2-external-urlinfo.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-update_disconnected.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No update_disconnected step for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Debug/SDL2-external-update_disconnected
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\SDL2-external-update-info.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-update_disconnected</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No update_disconnected step for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Release/SDL2-external-update_disconnected
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\SDL2-external-update-info.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-update_disconnected</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-patch_disconnected.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch_disconnected step for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Debug/SDL2-external-patch_disconnected
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\SDL2-external-patch-info.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-update_disconnected;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-patch_disconnected</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No patch_disconnected step for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Release/SDL2-external-patch_disconnected
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\SDL2-external-patch-info.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-update_disconnected;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-patch_disconnected</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-configure.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing configure step for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_PREFIX=C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed -DBUILD_SHARED_LIBS:BOOL=OFF -DCMAKE_BUILD_TYPE=Release "-GVisual Studio 17 2022" "-DCMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files/Microsoft Visual Studio/2022/Community" -S C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external -B C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Debug/SDL2-external-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\tmp\SDL2-external-cfgcmd.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-patch_disconnected;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing configure step for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_PREFIX=C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed -DBUILD_SHARED_LIBS:BOOL=OFF -DCMAKE_BUILD_TYPE=Release "-GVisual Studio 17 2022" "-DCMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files/Microsoft Visual Studio/2022/Community" -S C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external -B C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Release/SDL2-external-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\tmp\SDL2-external-cfgcmd.txt;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-patch_disconnected;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-build.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing build step for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" --build . --config Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Debug/SDL2-external-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing build step for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" --build . --config Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Release/SDL2-external-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f1d6d0f9aef8cb21895f47dd70422c08\SDL2-external-install.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing install step for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" --build . --config Debug --target install
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Debug/SDL2-external-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing install step for 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" --build . --config Release --target install
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Release/SDL2-external-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\f3a0be17337078c02916f0c73959369e\SDL2-external-complete.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/bukat/Projects/MiAKG/lab3/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/CMakeFiles/Debug/SDL2-external-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Debug/SDL2-external-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-install;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-mkdir;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-download;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-update_disconnected;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-patch_disconnected;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-configure;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Debug\SDL2-external-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\Debug\SDL2-external-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Completed 'SDL2-external'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/bukat/Projects/MiAKG/lab3/CMakeFiles/Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/CMakeFiles/Release/SDL2-external-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/bukat/Projects/MiAKG/lab3/external-libs/installed/source-tree/src/SDL2-external-stamp/Release/SDL2-external-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-install;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-mkdir;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-download;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-update_disconnected;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-patch_disconnected;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-configure;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\src\SDL2-external-stamp\Release\SDL2-external-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\Release\SDL2-external-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\6541dfa1ea2677739c66e2584d8836e1\SDL2-external.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\Debug\SDL2-external-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\SDL2-external</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\Release\SDL2-external-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\SDL2-external</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/bukat/Projects/MiAKG/lab3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/bukat/Projects/MiAKG/lab3 -BC:/Users/bukat/Projects/MiAKG/lab3 --check-stamp-file C:/Users/bukat/Projects/MiAKG/lab3/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\verify.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeCCompiler.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeCXXCompiler.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeRCCompiler.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeSystem.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\CompilerWarnings.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\FileOrUrl.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\SDL2-external.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\Sanitizers.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\StandardProjectSettings.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\StaticAnalyzers.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\glm-external.cmake;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\tmp\SDL2-external-mkdirs.cmake;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\tmp\glm-external-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/bukat/Projects/MiAKG/lab3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/bukat/Projects/MiAKG/lab3 -BC:/Users/bukat/Projects/MiAKG/lab3 --check-stamp-file C:/Users/bukat/Projects/MiAKG/lab3/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\verify.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeCCompiler.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeCXXCompiler.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeRCCompiler.cmake;C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\3.29.0-rc1\CMakeSystem.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\CompilerWarnings.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\FileOrUrl.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\SDL2-external.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\Sanitizers.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\StandardProjectSettings.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\StaticAnalyzers.cmake;C:\Users\bukat\Projects\MiAKG\lab3\cmake-ext\glm-external.cmake;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\tmp\SDL2-external-mkdirs.cmake;C:\Users\bukat\Projects\MiAKG\lab3\external-libs\installed\source-tree\tmp\glm-external-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\bukat\Projects\MiAKG\lab3\CMakeFiles\SDL2-external">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\bukat\Projects\MiAKG\lab3\ZERO_CHECK.vcxproj">
+      <Project>{9DBDD571-8B74-3E00-80B3-802B4A26AA17}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
