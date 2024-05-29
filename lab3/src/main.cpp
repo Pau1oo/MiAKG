@@ -5,6 +5,7 @@
 #include <string>
 #include <cassert>
 #include <stdlib.h>
+#include <math.h>
 
 bool init();
 void close();

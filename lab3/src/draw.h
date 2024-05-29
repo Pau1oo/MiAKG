@@ -3,6 +3,7 @@
 #include <cassert>
 #include <conio.h>
 #include <stdlib.h>
+#include <math.h>
 
 //Screen dimension constants
 const int SCREEN_WIDTH = 920;
